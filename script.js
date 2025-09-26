@@ -1,4 +1,4 @@
-// Elementos DOM
+
 const productValueInput = document.getElementById('product-value');
 const addProductButton = document.getElementById('add-product');
 const productsTableBody = document.querySelector('#products-table tbody');
@@ -7,21 +7,21 @@ const moneyInput = document.getElementById('money-input');
 const calculateChangeButton = document.getElementById('calculate-change');
 const changeValueElement = document.getElementById('change-value');
 
-// Array para armazenar os produtos
+
 let products = [];
 let productCounter = 1;
 
-// Função para formatar valores em reais
+
 function formatCurrency(value) {
     return 'R$ ' + value.toFixed(2).replace('.', ',');
 }
 
-// Função para atualizar a tabela de produtos
+
 function updateProductsTable() {
-    // Limpa a tabela
+   
     productsTableBody.innerHTML = '';
     
-    // Adiciona cada produto à tabela
+  
     products.forEach((product) => {
         const row = document.createElement('tr');
         
@@ -38,7 +38,7 @@ function updateProductsTable() {
     });
 }
 
-// Função para atualizar o total da compra
+
 function updateTotal() {
     const total = products.reduce((sum, product) => sum + product.value, 0);
     totalValueElement.textContent = formatCurrency(total);
@@ -85,7 +85,7 @@ function calculateChange() {
     }
 }
 
-// Event Listeners
+
 addProductButton.addEventListener('click', addProduct);
 
 productValueInput.addEventListener('keypress', (e) => {
@@ -102,6 +102,6 @@ moneyInput.addEventListener('keypress', (e) => {
     }
 });
 
-// Inicialização
+
 updateProductsTable();
 updateTotal();
