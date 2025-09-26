@@ -6,7 +6,7 @@
 }
 
 body {
-    background-color: #55b786;
+    background-color: #4d9973;
    display:flex;
     justify-content: center;
     align-items: center;
@@ -51,7 +51,7 @@ h1{
 }
 
 button {
-    background-color: #6b786b;
+    background-color: #575b57;
     color: white;
     border: none;
     padding: 10px 15px;
